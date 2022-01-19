@@ -46,10 +46,20 @@ export function RegisterLoginData() {
       id: String(uuid.v4()),
       ...formData
     }
-
     const dataKey = '@savepass:logins';
-
-    // Save data on AsyncStorage and navigate to 'Home' screen
+    try {
+      const data = await AsyncStorage.getItem(dataKey);
+      if (data) {
+        const parsedData = JSON.parse(data);
+        const newData = [...parsedData, newLoginData];
+        await AsyncStorage.setItem(dataKey, JSON.stringify(newData));
+      } else {
+        await AsyncStorage.setItem(dataKey, JSON.stringify([newLoginData]));
+      }
+      navigate('Home');
+    } catch (error) {
+      Alert.alert('Erro ao salvar dados!');
+    }
   }
 
   return (
