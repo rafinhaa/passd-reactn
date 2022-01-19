@@ -37,7 +37,12 @@ yarn run ios
 
 ## ℹ️ Info
 #### Preview
-![Watch the video](docs/videos/demo.gif)
+<h4 align="center">
+    <h1 align="center">
+      <img width="200" border-radius: 10px" height="auto" alt="demo" title="Screenshot" src="docs/videos/demo.gif" />
+    </h1>
+    <br><br>
+</h4>
 
 ## 📄 Changelog
 ##### v0.0.1
