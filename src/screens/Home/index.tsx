@@ -30,7 +30,11 @@ export function Home() {
 
   async function loadData() {
     const dataKey = '@savepass:logins';
-    // Get asyncStorage data, use setSearchListData and setData
+    const data = await AsyncStorage.getItem(dataKey);
+    if (data) {
+      setSearchListData(JSON.parse(data));
+      setData(JSON.parse(data));
+    }
   }
 
   function handleFilterLoginData() {
