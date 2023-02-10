@@ -20,8 +20,8 @@ Segundo desafio da trilha de React Native do Ignite da Rocketseat. Nesse desafio
 ## 🏁 How to run the project
 #### Clone the repository
 ```bash
-git clone https://github.com/rafinhaa/ignite-reactrn-desafio-02
-cd ignite-reactrn-desafio-02
+git clone https://github.com/rafinhaa/passd-reactn
+cd passd-reactn
 ```
 
 #### Install dependencies
